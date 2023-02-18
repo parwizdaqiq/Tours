@@ -1,0 +1,122 @@
+.heading-primary {
+    color: white;
+    text-transform: uppercase;
+
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+
+
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+    
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+
+        @include respond(phone) {
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        }
+
+    }
+
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 17.5px;
+    
+        animation-name:  moveInRight;
+        
+
+        @include respond(phone) {
+            letter-spacing: .5rem;
+        }
+        
+    }
+}
+
+.heading-secondary {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-image: linear-gradient(to right, $color-primary-light,$color-primary-dark);
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+    transition: all .2s;
+
+    @include respond(tab-port) {
+        font-size: 3rem;
+    }
+
+    @include respond(phone){
+        font-size: 2.5rem;
+    }
+
+    &:hover {
+        text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    }
+
+    &__about {
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        background-image: linear-gradient(to right, $color-primary-light,$color-primary-dark);
+        -webkit-background-clip: text;
+        color: transparent;
+        letter-spacing: .2rem;
+        transition: all .2s;
+        padding-top: 10rem;
+        padding-left: 2rem;
+    
+        &:hover {
+            text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+        }
+    }
+
+    &-popup {
+        margin-top: -20rem;
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        background-image: linear-gradient(to right, $color-primary-light,$color-primary-dark);
+        -webkit-background-clip: text;
+        color: transparent;
+        letter-spacing: .2rem;
+        transition: all .2s;
+        padding-top: 10rem;
+        padding-left: 1rem;
+    
+        &:hover {
+            text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+        }
+    }
+}
+
+.heading-tertiary {
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;  
+    color: black;  
+
+    &-popup {
+        margin-top: 0rem;
+        font-size: 1.6rem;
+        font-weight: 600;
+        text-transform: uppercase;  
+        color: black;  
+    }
+}
+
+.paragraph {
+    font-size: 1.6rem;
+    color: $color-grey-dark-2;
+
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}
